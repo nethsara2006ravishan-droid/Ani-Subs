@@ -20,7 +20,7 @@ jobs:
           cordova create app com.nethsara.anisubs "Ani Subs"
           cp index.html manifest.json sw.js icon-192.png icon-512.png app/www/
           cp icon-512.png app/www/icon.png
-          python3 -c "import re; p='app/config.xml'; t=open(p).read(); t=re.sub(r'<icon[^>]*/?>', '', t); t=t.replace('</widget>', '  <icon src=\"icon.png\" />\n</widget>'); open(p,'w').write(t)"
+          python3 -c "import re; p='app/config.xml'; t=open(p).read(); t=re.sub(r'<icon[^>]*/?>', '', t); t=t.replace('</widget>', '  <icon src=\"www/icon.png\" />\n</widget>'); open(p,'w').write(t)"
           cd app
           cordova platform add android
           cordova build android --debug
