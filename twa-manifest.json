@@ -1,0 +1,20 @@
+{
+  "packageId": "com.nethsara.anisubs",
+  "host": "nethsara2006ravishan.github.io",
+  "name": "Ani Subs",
+  "launcherName": "Ani Subs",
+  "display": "standalone",
+  "themeColor": "#0A0A0F",
+  "navigationColor": "#0A0A0F",
+  "backgroundColor": "#0A0A0F",
+  "enableNotifications": false,
+  "startUrl": "/Ani-Subs/",
+  "iconUrl": "https://nethsara2006ravishan.github.io/Ani-Subs/icon-512.png",
+  "maskableIconUrl": "https://nethsara2006ravishan.github.io/Ani-Subs/icon-512.png",
+  "splashScreenFadeOutDuration": 300,
+  "monochromeIconUrl": "https://nethsara2006ravishan.github.io/Ani-Subs/icon-512.png",
+  "fallbackType": "customtabs",
+  "features": {},
+  "shortcuts": [],
+  "webManifestUrl": "https://nethsara2006ravishan.github.io/Ani-Subs/manifest.json"
+}
