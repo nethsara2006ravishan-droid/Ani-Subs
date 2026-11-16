@@ -12,12 +12,16 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-      - uses: android-actions/setup-android@v3
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+      - name: Accept Android licenses
+        run: |
+          mkdir -p $ANDROID_HOME/licenses
+          printf "8933bad161af4178b1185d1a37fbf41ea5269c\nd56f5187479451eabf01f2d5f4a3f1d7c9a5c2f\n" > $ANDROID_HOME/licenses/android-sdk-license
+          yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
       - run: npm install -g @bubblewrap/cli
-      - run: bubblewrap build --skipPwaValidation
+      - run: bubblewrap build --skipSigning --skipPwaValidation
       - uses: actions/upload-artifact@v4
         with:
           name: Ani-Subs-APK
