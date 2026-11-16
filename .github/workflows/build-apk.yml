@@ -19,6 +19,8 @@ jobs:
       - run: |
           cordova create app com.nethsara.anisubs "Ani Subs"
           cp index.html manifest.json sw.js icon-192.png icon-512.png app/www/
+          cp icon-512.png app/www/icon.png
+          find app/www/res -type f -name "*.png" -exec cp icon-512.png {} \;
           cd app
           cordova platform add android
           for d in platforms/android/app/src/main/res/mipmap-hdpi/ platforms/android/app/src/main/res/mipmap-mdpi/ platforms/android/app/src/main/res/mipmap-xhdpi/ platforms/android/app/src/main/res/mipmap-xxhdpi/ platforms/android/app/src/main/res/mipmap-xxxhdpi/; do cp ../icon-512.png "$d/ic_launcher.png"; cp ../icon-512.png "$d/ic_launcher_round.png"; done
